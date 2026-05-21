@@ -1,0 +1,290 @@
+export default function PortfolioWebsite() {
+  const projects = [
+    {
+      title: "House Price Prediction",
+      desc: "Machine Learning model using Linear Regression for predicting house prices.",
+      github: "#",
+    },
+    {
+      title: "Spam Email Detection",
+      desc: "NLP based spam detection system using Naive Bayes algorithm.",
+      github: "#",
+    },
+    {
+      title: "Movie Recommendation System",
+      desc: "Recommendation engine using cosine similarity and NLP.",
+      github: "#",
+    },
+    {
+      title: "Fake News Detection",
+      desc: "ML + NLP based fake news classifier using TF-IDF.",
+      github: "#",
+    },
+    {
+      title: "AI Resume Screening",
+      desc: "AI-powered resume matching and ATS scoring system.",
+      github: "#",
+    },
+    {
+      title: "AI Interview Bot",
+      desc: "AI bot for technical interview practice and scoring.",
+      github: "#",
+    },
+  ];
+
+  const skills = [
+    "Python",
+    "Machine Learning",
+    "Deep Learning",
+    "NLP",
+    "React",
+    "JavaScript",
+    "Data Science",
+    "AI Automation",
+  ];
+
+  return (
+    <div className="min-h-screen bg-slate-950 text-white scroll-smooth">
+      {/* NAVBAR */}
+      <nav className="fixed top-0 w-full z-50 bg-slate-950/80 backdrop-blur border-b border-slate-800">
+        <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+          <h1 className="text-2xl font-bold text-cyan-400 tracking-wide">
+            Anshul.dev
+          </h1>
+
+          <div className="hidden md:flex gap-8 text-sm font-medium">
+            <a href="#home" className="hover:text-cyan-400 transition">
+              Home
+            </a>
+            <a href="#about" className="hover:text-cyan-400 transition">
+              About
+            </a>
+            <a href="#skills" className="hover:text-cyan-400 transition">
+              Skills
+            </a>
+            <a href="#projects" className="hover:text-cyan-400 transition">
+              Projects
+            </a>
+            <a href="#contact" className="hover:text-cyan-400 transition">
+              Contact
+            </a>
+          </div>
+        </div>
+      </nav>
+
+      {/* HERO SECTION */}
+      <section
+        id="home"
+        className="min-h-screen flex items-center justify-center px-6 relative overflow-hidden"
+      >
+        <div className="absolute w-96 h-96 bg-cyan-500/20 blur-3xl rounded-full top-10 left-10 animate-pulse"></div>
+
+        <div className="absolute w-96 h-96 bg-blue-500/20 blur-3xl rounded-full bottom-10 right-10 animate-pulse"></div>
+
+        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center z-10">
+          <div className="space-y-6 animate-in fade-in slide-in-from-left duration-1000">
+            <p className="text-cyan-400 font-semibold tracking-widest uppercase">
+              AI / ML Developer
+            </p>
+
+            <h1 className="text-5xl md:text-7xl font-extrabold leading-tight">
+              Hi, I'm <span className="text-cyan-400">Anshul Gupta</span>
+            </h1>
+
+            <p className="text-slate-300 text-lg leading-relaxed max-w-xl">
+              Passionate about building AI-powered applications,
+              Machine Learning systems, NLP projects, and modern
+              responsive websites.
+            </p>
+
+            <div className="flex gap-4 flex-wrap">
+              <a
+                href="#projects"
+                className="px-6 py-3 rounded-2xl bg-cyan-400 text-black font-semibold hover:scale-105 transition duration-300"
+              >
+                View Projects
+              </a>
+
+              <a
+                href="#contact"
+                className="px-6 py-3 rounded-2xl border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black transition duration-300"
+              >
+                Hire Me
+              </a>
+            </div>
+          </div>
+
+          <div className="flex justify-center animate-in fade-in zoom-in duration-1000">
+            <div className="relative">
+              <div className="absolute inset-0 rounded-full bg-cyan-400 blur-3xl opacity-30 animate-pulse"></div>
+
+              <img
+                src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=800&auto=format&fit=crop"
+                alt="Profile"
+                className="w-72 h-72 md:w-96 md:h-96 object-cover rounded-full border-4 border-cyan-400 shadow-2xl relative"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ABOUT */}
+      <section id="about" className="py-24 px-6">
+        <div className="max-w-5xl mx-auto text-center">
+          <h2 className="text-4xl md:text-5xl font-bold mb-8 text-cyan-400">
+            About Me
+          </h2>
+
+          <p className="text-slate-300 text-lg leading-9">
+            I am an AI & Machine Learning enthusiast skilled in Python,
+            NLP, Deep Learning, and modern Web Development. I enjoy
+            building real-world projects that solve practical problems
+            using Artificial Intelligence and Data Science.
+          </p>
+        </div>
+      </section>
+
+      {/* SKILLS */}
+      <section id="skills" className="py-24 px-6 bg-slate-900/50">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-4xl md:text-5xl font-bold text-center text-cyan-400 mb-16">
+            Skills
+          </h2>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            {skills.map((skill, index) => (
+              <div
+                key={index}
+                className="bg-slate-800 rounded-3xl p-8 text-center border border-slate-700 hover:border-cyan-400 hover:-translate-y-3 transition duration-300 shadow-xl"
+              >
+                <h3 className="text-xl font-semibold">{skill}</h3>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* PROJECTS */}
+      <section id="projects" className="py-24 px-6">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-4xl md:text-5xl font-bold text-center text-cyan-400 mb-16">
+            Projects
+          </h2>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {projects.map((project, index) => (
+              <div
+                key={index}
+                className="bg-slate-900 rounded-3xl overflow-hidden border border-slate-800 hover:border-cyan-400 hover:-translate-y-3 transition duration-300 shadow-2xl"
+              >
+                <div className="h-48 bg-gradient-to-br from-cyan-500 to-blue-700"></div>
+
+                <div className="p-6 space-y-4">
+                  <h3 className="text-2xl font-bold text-cyan-400">
+                    {project.title}
+                  </h3>
+
+                  <p className="text-slate-300 leading-7">
+                    {project.desc}
+                  </p>
+
+                  <a
+                    href={project.github}
+                    className="inline-block px-5 py-3 rounded-xl bg-cyan-400 text-black font-semibold hover:scale-105 transition"
+                  >
+                    GitHub
+                  </a>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* SERVICES */}
+      <section className="py-24 px-6 bg-slate-900/50">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-4xl md:text-5xl font-bold text-center text-cyan-400 mb-16">
+            Services
+          </h2>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="bg-slate-800 rounded-3xl p-10 border border-slate-700 hover:border-cyan-400 transition hover:-translate-y-2">
+              <h3 className="text-2xl font-bold mb-4">
+                Machine Learning Projects
+              </h3>
+              <p className="text-slate-300 leading-7">
+                Building AI and ML applications for real-world use cases.
+              </p>
+            </div>
+
+            <div className="bg-slate-800 rounded-3xl p-10 border border-slate-700 hover:border-cyan-400 transition hover:-translate-y-2">
+              <h3 className="text-2xl font-bold mb-4">
+                Web Development
+              </h3>
+              <p className="text-slate-300 leading-7">
+                Responsive and modern frontend website development.
+              </p>
+            </div>
+
+            <div className="bg-slate-800 rounded-3xl p-10 border border-slate-700 hover:border-cyan-400 transition hover:-translate-y-2">
+              <h3 className="text-2xl font-bold mb-4">
+                AI Automation
+              </h3>
+              <p className="text-slate-300 leading-7">
+                Smart AI tools and automation systems for productivity.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CONTACT */}
+      <section id="contact" className="py-24 px-6">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-4xl md:text-5xl font-bold text-cyan-400 mb-8">
+            Contact Me
+          </h2>
+
+          <p className="text-slate-300 mb-12 text-lg">
+            Have a project idea or want to work together?
+            Let's connect.
+          </p>
+
+          <div className="bg-slate-900 rounded-3xl p-10 border border-slate-800 shadow-2xl">
+            <div className="grid md:grid-cols-2 gap-6">
+              <input
+                type="text"
+                placeholder="Your Name"
+                className="bg-slate-800 p-4 rounded-2xl outline-none border border-slate-700 focus:border-cyan-400"
+              />
+
+              <input
+                type="email"
+                placeholder="Your Email"
+                className="bg-slate-800 p-4 rounded-2xl outline-none border border-slate-700 focus:border-cyan-400"
+              />
+            </div>
+
+            <textarea
+              rows="6"
+              placeholder="Your Message"
+              className="w-full mt-6 bg-slate-800 p-4 rounded-2xl outline-none border border-slate-700 focus:border-cyan-400"
+            ></textarea>
+
+            <button className="mt-6 px-8 py-4 rounded-2xl bg-cyan-400 text-black font-bold hover:scale-105 transition duration-300">
+              Send Message
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* FOOTER */}
+      <footer className="border-t border-slate-800 py-8 text-center text-slate-400">
+        <p>
+          © 2026 Anshul Gupta • AI/ML Developer Portfolio
+        </p>
+      </footer>
+    </div>
+  );
+}
